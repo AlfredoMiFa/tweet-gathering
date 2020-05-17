@@ -4,9 +4,19 @@ spring:
     username: guest
     password: guest
     port: 5672
-    queue:
-      twitter: twitter-stream
-    exchange:
-      twitter: twitter-exchange
-    routing_key:
-      track: track.*
+
+queue:
+  twitter: twitter-stream
+exchange:
+  twitter: twitter-exchange
+routing_key:
+  track: track.*
+
+server:
+  port: 8082
+
+twitter:
+  consumer-key: ${consumer_key}
+  consumer-secret: ${consumer_secret}
+  access-token: ${access_token}
+  access-token-secret: ${access_token_secret}
